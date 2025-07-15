@@ -1,0 +1,451 @@
+*{
+    margin: 0;
+}
+.light-theme {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --navbar-color: #dddddd;
+    --highlight-color: #007BFF;
+}
+
+body.light-theme .container {
+background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+body.light-theme .navbar ,
+body.light-theme .description ,
+body.light-theme .about-me{
+    background-color: var(--navbar-color);
+}
+
+body.light-theme .details p {
+    color: var(--highlight-color);
+}
+
+body.light-theme i ,
+body.light-theme p ,
+body.light-theme h2 ,
+body.light-theme h3 ,
+body.light-theme h1 {
+    color: var(--text-color);
+}
+
+body.light-theme i:hover {
+    color: var(--highlight-color);
+}
+
+body.light-theme .progress-container {
+    background-color: #cccccc;
+}
+
+body.light-theme .progress-bar-web,
+body.light-theme .progress-bar-data,
+body.light-theme .progress-bar-design,
+body.light-theme .progress-bar-back,
+body.light-theme .progress-bar-prob {
+    background-color: var(--highlight-color);
+}
+
+.container{
+    font-family: Helvetica;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #000000;
+    
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    width: 65px;
+    height: 80%;
+    background-color: #333333;
+    
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    width: 450px;
+    height: 95%;
+    /* box-shadow: 0 0px 0px 0px white, 0 0px 0px 0px white, 12px 0 15px -4px rgba(31, 73, 125, 0.8), -12px 0 15px -4px rgba(31, 73, 125, 0.8); */
+    background-image: url(../imgs/real-profile2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    z-index: 10;
+}
+
+.details{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 80px;
+}
+
+.details p {
+    color: #00FFFF;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.connections{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    width: 560px;
+    height: 85%;
+    background-color: #333333;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+i{
+    cursor: pointer;
+    color: silver;
+}
+i:hover{
+    color: #00FFFF;
+}
+
+/*                            ABOUT ME Section                            */
+
+.about-me{
+    display: block;
+    width: 90%;
+}
+
+.about-me p{
+    color: #8f8f8f;
+    line-height: 1.6;
+}
+.about-me h1{
+    color:white;
+}
+.about-me h1:hover{
+    color:#5df8f8;
+    cursor: default ;
+}
+.skills{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+
+.skills p{
+    line-height: 1.8;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.skill{
+    width: 50%;
+    height: 100%;
+    margin-top: 20px;
+}
+.skill h3{
+    color:white;
+}
+.skill h3:hover{
+    color:#5df8f8;
+    cursor: pointer ;
+}
+.numbers{
+    display: flex;
+    margin-block: 2rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.number{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.number label{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/*                            Resume Section                            */
+
+.resume{
+    display: none;
+    width: 90%;
+    
+}
+
+.resume-title{
+    font-weight: 1000;
+    font-size: 60px;
+    color: white;
+}
+
+.exp{
+    margin-block: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.exp p {
+    color:#5df8f8;
+    font-weight: 600;
+}
+
+.exp span{
+    font-weight: 1000;
+}
+#skills i{
+    margin-bottom: 40px;
+    color: #5df8f8;
+}
+#skill p:first-child{
+    font-size: 13px;
+    font-weight: bold;
+}
+#titles{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    color: white;
+    margin-top: 15px;
+}
+
+.progress-container {
+    margin-top: 5px;
+    width: 100%; 
+    background-color: #7a7a7a;
+    height: 3px; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    position: relative;
+}
+
+.progress-bar-web {
+    height: 100%; 
+    width: 0%; 
+    background-color: #5df8f8; 
+    border-radius: 10px 0 0 10px; 
+    animation: web 3s ease-out forwards;
+}
+
+.progress-bar-data {
+    height: 100%; 
+    width: 0%; 
+    background-color: #5df8f8; 
+    border-radius: 10px 0 0 10px; 
+    animation: data 3s ease-out forwards;
+}
+.progress-bar-design {
+    height: 100%; 
+    width: 0%; 
+    background-color: #5df8f8; 
+    border-radius: 10px 0 0 10px; 
+    animation: design 3s ease-out forwards;
+}
+.progress-bar-back {
+    height: 100%; 
+    width: 0%; 
+    background-color: #5df8f8; 
+    border-radius: 10px 0 0 10px; 
+    animation: back 3s ease-out forwards;
+}
+.progress-bar-prob {
+    height: 100%; 
+    width: 0%; 
+    background-color: #5df8f8; 
+    border-radius: 10px 0 0 10px; 
+    animation: prob 3s ease-out forwards;
+}
+
+.edandexp{
+    display: flex;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.ed{
+    width: 50%;
+}
+
+.sample{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sample p:nth-child(1){
+    font-size: 12px;
+    color: #00FFFF;
+}
+
+.sample p:nth-child(2){
+    font-size: 16px;
+    font-weight: 1000;
+}
+
+.sample p:nth-child(3){
+    font-size: 14px;
+    color: #636363;
+}
+
+.sample p:nth-child(4){
+    font-size: 15px;
+    color: #8f8f8f;
+}
+
+.exper{
+    width: 50%;
+}
+
+/*                           Contact me Section                                */
+
+.contact-me{
+    display: none;
+    width: 90%;
+}
+
+.contact-me p{
+    color: white;
+    margin-block: 20px;
+    font-size: 50px;
+    font-weight: 1000;
+}
+
+iframe {
+    height: 400px;
+    width: 100%;
+}
+
+.context{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sample-context{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+}
+.sample-context p{
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h1{
+    color: white;
+}
+
+.form-inputs{
+    height: 40px;
+    margin-block: 20px;
+    border: none;
+    border-bottom: 1px solid #7a7a7a;
+    background: none;
+}
+.form-inputs::placeholder{
+    font-weight: 600;
+}
+
+.form-inputs:focus{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #00FFFF;
+}
+.form-inputs:focus::placeholder{
+    color: #00FFFF;
+    font-weight: 600;
+}
+
+.form button{
+    font-weight: 600;
+    width: 50%;
+    height: 3rem;
+    background-color: #00FFFF;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.form button:hover{
+    color: #222222;
+    background-color: #00b3b3;
+}
+
+/*                           my blogs Section                                */
+
+.my-blog{
+    display: none;
+    width: 90%;
+}
+
+.my-blog h1{
+    margin-top: 50px;
+    color: white;
+}
+.my-blog h1:hover{
+    color: #00FFFF;
+    cursor: default;
+}
+.github{
+    font-size: 40px;
+    padding: auto;
+    text-align: center;
+    margin-top: 50px;
+}
+@keyframes web {
+    to {
+        width: 85%; 
+}
+}
+@keyframes data {
+    to {
+        width: 60%; 
+}
+}
+@keyframes design {
+    to {
+        width: 50%; 
+}
+}
+@keyframes back {
+    to {
+        width: 30%; 
+}
+}
+@keyframes prob {
+    to {
+        width: 70%; 
+}
+}
